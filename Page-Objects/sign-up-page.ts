@@ -1,8 +1,8 @@
 import { type Locator, type Page } from '@playwright/test';
 import { faker } from '@faker-js/faker'
-import { MainPage } from './main-page';
+import { SiteHeader } from './site-header';
 
-export class SightUpPage extends MainPage {
+export class SightUpPage extends SiteHeader {
     readonly emailAddressInput: Locator = this.page.locator('#username');
     readonly nextBth: Locator = this.page.locator('[data-testid="submit"]');
     readonly passwordInput: Locator = this.page.locator('#new-password');
